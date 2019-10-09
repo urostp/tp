@@ -1,6 +1,6 @@
 import React from "react";
 import "./App.css";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import AboutPage from "./About";
 function App() {
   return (
@@ -11,7 +11,7 @@ function App() {
         <nav>
           <ul>
             <li>
-              <link to="/about">About</link>
+              <Link to="/about">About</Link>
             </li>
           </ul>
         </nav>
