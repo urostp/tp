@@ -1,6 +1,7 @@
 import React from "react";
 import "./App.css";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import AboutPage from "./About";
 function App() {
   return (
     <Router>
@@ -17,7 +18,7 @@ function App() {
 
         <Switch>
           <Route path="/about">
-            <div>About</div>
+            <AboutPage />
           </Route>
         </Switch>
         <ul>
