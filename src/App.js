@@ -1,32 +1,16 @@
-import React from "react";
-import "./App.css";
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
-import AboutPage from "./About";
+import React from 'react'
+import { Route, Switch } from 'react-router-dom'
+
+import Home from './pages/Home'
+import About from './pages/About'
+
 function App() {
   return (
-    <Router>
-      <div className="App">
-        <h1>This should be a exercisse in creating and managing Git Repos</h1>
-        <p>To enter add your git handle !</p>
-        <nav>
-          <ul>
-            <li>
-              <Link to="/about">About</Link>
-            </li>
-          </ul>
-        </nav>
-
-        <Switch>
-          <Route path="/about">
-            <AboutPage />
-          </Route>
-        </Switch>
-        <ul>
-          <li>@ukaric</li>
-        </ul>
-      </div>
-    </Router>
-  );
+    <Switch>
+      <Route exact path="/" component={Home} />
+      <Route path="/about" component={About} />
+    </Switch>
+  )
 }
 
-export default App;
+export default App
